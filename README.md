@@ -37,11 +37,23 @@ databaseURL: "https://<DATABASE_NAME>.firebaseio.com"
 You can now save and close the file
 
 # Usage
+Install the dependencies by running:
+```
+npm install
+```
+
 By default, the module listens on port `8080` on `localhost`.
-The required dependencies can be installed and the listener started, by using the following command:
+The listener can be started, by using the following command:
 ```
 npm start
 ```
+
 It is advisable to daemonize this module and let it run in the background.
 You can use PM2, which is a process manager for Node.js applications. PM2 provides an easy way to manage and daemonize applications.
 
+# Disclaimer
+This is still very much a work in progress and might break from time to time.
+Before opening an issue, please make sure you are running the latest version of Node.js and have all the dependencies installed.
+Also make sure you have followed the configuration steps carefully.
+
+~LIVE LONG AND PROSPER~
