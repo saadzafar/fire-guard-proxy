@@ -2,6 +2,7 @@
 const admin = require('firebase-admin'),
 	express = require('express'),
 	httpProxy = require('http-proxy'),
+	cors = require('cors'),
 	apiProxy = httpProxy.createProxyServer(),
 	serviceAccount = require(''), //service account key JSON file
 	endpoint = '', //proxy destination
@@ -15,6 +16,8 @@ admin.initializeApp({
 });	
 	
 var app = express(); //initialize Express
+
+app.use(cors()); //allows the sharing of restricted resources to be requested from an outside domain
 
 app.get('/*', function(req, res) { //GET API
 	authenticate(req, res);
