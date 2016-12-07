@@ -1,4 +1,6 @@
 #!/usr/bin/env nodejs
+//proxy.js
+'use strict'
 const admin = require('firebase-admin'),
 	express = require('express'),
 	httpProxy = require('http-proxy'),
